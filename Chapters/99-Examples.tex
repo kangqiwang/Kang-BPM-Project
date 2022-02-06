@@ -1,0 +1,56 @@
+\chapter{Examples of latex}
+
+This is a chapter to demonstrate different uses of latex.
+It can also be used to test new things before adding to the main text.
+
+\section{This is a section}
+
+\subsection{This is a subsection}
+
+\subsection{This is another subsection}
+
+\section{This is another section}
+
+\subsection{Example of including a figure}
+
+\begin{figure}[!htb]
+    \centering 
+    \includegraphics[scale=0.5]{img.png}
+    \caption{Example of a figure.}
+    \label{figure:img}
+\end{figure}
+
+\subsection{Using internal references}
+
+The chapter~\ref{chap:diagnosis} contains a client \#1 section~\ref{sec:diagnosis-company}.
+This is the example for introduction chapter
+
+
+\section{Examples for the changes package}
+
+Official documentation can be found at \url{http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changes/changes.english.pdf}.
+
+Please use the following commands according to your change:
+
+for added text:
+\added[id=CdS]{This is a new text added}.
+\added[id=CdS, comment=Including a comment]{This is another new text added}
+
+for deleted text:
+\deleted[id=CdS]{Text to be removed.}
+
+for replaced text:
+\replaced[id=CdS]{Inserting a new text}{Replacing this old text}.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Proin \deleted[id=CdS]{dictum mollis} erat eget vehicula. Aenean semper nibh lectus, a fermentum est ornare non. Sed interdum sit amet elit eu finibus. 
+Pellentesque erat dolor, sodales in cursus et, rutrum vel turpis. 
+Mauris pretium lacus quis diam sodales, at tempus ante congue. 
+Praesent vel suscipit enim. Sed turpis est, facilisis id purus aliquet, pharetra molestie ante. 
+\replaced[id=CdS]{Inserting a new text}{Aliquam gravida} lacus nec felis consectetur, sit amet cursus ex molestie. Vivamus porttitor nisi quis dictum \highlight[id=CdS, comment={With a comment}]{scelerisque}. 
+Donec at tristique sem, eu pulvinar mi. 
+Quisque urna est, consequat ut sem sed, ultricies feugiat urna. 
+\highlight[id=CdS]{Sed} ullamcorper bibendum felis, sit amet finibus eros condimentum a.
+\comment[id=CdS]{This is a separate comment.}
+
+

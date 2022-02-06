@@ -2,6 +2,19 @@
 
 \section{Business Process Management}
 
+BPM has been viewed from highly diverse angles ranging from a management strategy to a software system, so much so, that there is still not a common consensus even about the definition of the name itself~\cite{van2003workflow}. BPM includes methods, techniques and tools to support the design, enactment, management and analysis of business processes~\cite{van2003workflow}.
+
+BPM is a cycle methodology where several perspectives of BPs are investigated during its various stages~\cite{lodhi2013business}. In order to effectively understand BPM terminologies and features, we start with an overview of the BPM life cycle.
+
+According to Van-Der-Aalst~\cite{van2003workflow}, the BPM life cycle comprises four
+stages: process design, system configuration, process enactment and diagnosis.
+\begin{itemize}
+    \item In the process design stage, the AS-IS BPs are electronically modelled into the BPMS by using graphical standards, such as UML and BPMN.
+    \item In the system configuration stage, the BPMS and the underlying system infrastructure are configured. 
+    \item In the process enactment stage, electronically modelled BPs are deployed in the BPMS engines. by using execution standards, such as BPEL and BPML.
+    \item In the diagnosis stage, the BPM analysts define and improve bottlenecks in the BPs by using analysis and monitoring tools, such as business activity monitoring (BAM)) and process mining .
+\end{itemize}
+
 
 \section{Business Process Mining}
 
@@ -9,7 +22,7 @@ While BPM covers the methods, techniques and tools that support the design, mana
 
 
 
-Figure ~\ref{figure:BPMJ} introduces the components of process mining. Initially, the majority of process mining contributions focused on techniques for the discovery of processes (business process analysis), conformance checking (business process monitoring, business activity monitoring and process performance management) and various extensions ~\cite{song2008trace}, represented by the lower part of Figure 1. To enable these techniques, researchers also focused on log file preparation and mining algorithms ~\cite{weijters2006process}. Therefore, the first series of process mining papers primarily addressed the lower part of Figure ~\ref{figure:BPMJ}. Tiwari et al ~\cite{tiwari2008review} drew attention to the relationship between the process model and event logs by reviewing state-of-the-art process mining algorithms. Using 50 analyzed papers, they classified those that used process mining techniques and identified six practical challenges. The process mining manifesto ~\cite{van2012process} renewed these challenges and identified 11 challenges. While Tiwari et al. ~\cite{tiwari2008review} primarily addressed problematic log file preparation (e.g. noise, hidden tasks, duplicate tasks, etc.), the challenges of the process mining manifesto have a broader perspective covering the application and representation of process mining, e.g., balancing quality criteria such as fitness, simplicity, precision and generalization, cross-organizational mining and operational support.
+Figure ~\ref{figure:BPMJ} introduces the components of process mining. Initially, the majority of process mining contributions focused on techniques for the discovery of processes (business process analysis), conformance checking (business process monitoring, business activity monitoring and process performance management) and various extensions ~\cite{song2008trace}, represented by the lower part of Figure 1. To enable these techniques, researchers also focused on log file preparation and mining algorithms ~\cite{weijters2006process}. Therefore, the first series of process mining papers primarily addressed the lower part of Figure ~\ref{figure:BPMJ}. Tiwari et al. ~\cite{tiwari2008review} drew attention to the relationship between the process model and event logs by reviewing state-of-the-art process mining algorithms. Using 50 analyzed papers, they classified those that used process mining techniques and identified six practical challenges. The process mining manifesto ~\cite{van2012process} renewed these challenges and identified 11 challenges. While Tiwari et al. ~\cite{tiwari2008review} primarily addressed problematic log file preparation (e.g., noise, hidden tasks, duplicate tasks, etc.), the challenges of the process mining manifesto have a broader perspective covering the application and representation of process mining, e.g., balancing quality criteria such as fitness, simplicity, precision and generalization, cross-organizational mining and operational support.
 
 
 \begin{figure}[!htb]
@@ -23,8 +36,16 @@ Figure ~\ref{figure:BPMJ} introduces the components of process mining. Initially
 
 The study of event logs and how they are extracted from ISs (right part of Figure 1) are addressed by Rozinat and van der~\cite{rozinat2006decision}, de Medeiros and Günther ~\cite{de2005process} and Adriansyah et al. ~\cite{adriansyah2011conformance}. In these studies, the conformance of event logs and real world or reference models is assessed. Other authors address the use of process models in real-world accounting (left part of Figure 1), e.g., for forced behavior ~\cite{wen2009novel}, concept drift ~\cite{engel2014case} and security ~\cite{van2005process}. Finally, Maruster et al. ~\cite{muarucster2006rule} discuss noise cancellation in event logs.
 
-Later research focuses more on the upper-red part of Figure 1, i.e., the relationship between the “world” and ISs. While Turner et al. (2012) provide an overview of the process mining tools available in the UK market, other studies address either the combination of process mining with other technologies (e.g. artificial neural networks, support vector machines) (Maita et al., 2015) or a specific application area (e.g. healthcare) (Rojas et al., 2016; Yang and Su, 2014). Our study follows Rojas et al.’s path and addresses the relationship between the “world,” more specifically, “organizations,” and IS, which is marked in red in Figure 1. Similar to the most recent reviews (Kurniati et al., 2016; Maita et al., 2015; Rojas et al., 2016), we follow a systematic literature review approach. However, we adopt a broader scope to analyze empirical studies on process mining that is not limited to a specific market or application area.
+Later research focuses more on the upper-red part of Figure 1, i.e., the relationship between the “world” and ISs. While Turner ~\cite{turner2012process} provide an overview of the process mining tools available in the UK market, other studies address either the combination of process mining with other technologies (e.g. artificial neural networks, support vector machines) ~\cite{maita2015ultraflexible} or a specific application area (e.g. healthcare) ~\cite{rojas2016process} ~\cite{yang2014process}. Our study follows Rojas’s path and addresses the relationship between the “world,” more specifically, “organizations,” and IS, which is marked in red in Figure 1. Similar to the most recent reviews (~\cite{kurniati2016process}; ~\cite{maita2015process}; ~\cite{rojas2016process}), we follow a systematic literature review approach. However, we adopt a broader scope to analyze empirical studies on process mining that is not limited to a specific market or application area.
 
 
 
+\section{Other papers}
 
+Papers that have been read but it is still not clear where this paper fits within the project.
+
+\subsection{Paper \#01}
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+\section{Final Considerations}

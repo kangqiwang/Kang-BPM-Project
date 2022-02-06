@@ -1,6 +1,16 @@
 \chapter{Diagnosis}
 \label{chap:diagnosis}
 
+This chapter is under action research 
+
+\section{Introduction}
+
+Present the objective of the chapter.
+
+\section{Methodology}
+
+Describe the ``\textit{research tools}'' that you are planning to use to conduct your diagnosis.
+
 \section{The Company}
 \label{sec:diagnosis-company}
 
@@ -84,7 +94,7 @@ In the sequence, we describe the main components of Suitescript ~\ref{figure:sui
     \item Portlet SuiteScript Figure ~\ref{figure:suiteScript} — scripted Dashboard portlets allow for listing of any NetSuite content on the Dashboard or inclusion of external data-feeds via RSS, HTML or Flash, as well as Web 2.0 mashups (e.g. instant messaging, maps, blogs, more) via embedded Inline HTML fields, or iFrames.
     \item Scheduled SuiteScript ~\ref{figure:suiteScript} — facilitates business process customization via JavaScript extensions and allows for records to be processed as a scheduled batch to automate workflows such as re-assignment of stale leads, drip-marketing or scheduling of collection calls based on days overdue.
     \item User Event SuiteScript ~\ref{figure:suiteScript} — SuiteScript can be used to enforce data validation and business rules. User Event SuiteScripts are triggered as users work with records and data changes in NetSuite as they open, edit or save records.
-    \item Client SuiteScript ~\ref{figure:suiteScript} — field-level calculations, alerts and business logic are facilitated by SuiteScripts which run within the user's browser as they work with data and records within NetSuite. Additionally Server SuiteScript APIs can be invoked via the Client SuiteScript code to apply business logic beyond a single record.
+    \item Client SuiteScript ~\ref{figure:suiteScript} — field-level calculations, alerts and business logic are facilitated by SuiteScripts which run within the user's browser as they work with data and records within NetSuite. Additionally, Server SuiteScript APIs can be invoked via the Client SuiteScript code to apply business logic beyond a single record.
 \end{itemize}
 
 
@@ -99,7 +109,7 @@ SuiteAnalytics connect would help us to integrate with third-party applications 
 \end{figure}
 
 
-NetSuite SuiteAnalytics provides real-time Saved Searches, Reporting, Key Performance Indicators (KPIs) Dashboard and Workbook features that are built into the NetSuite solution. Real-time transparency into company performance across all business functions—from summary level to transaction level. However, it doesn't reveal any business process details, such as Figure ~\ref{figure:monitor}.
+NetSuite SuiteAnalytics provides real-time Saved Searches, Reporting, Key Performance Indicators (KPIs) Dashboard and Workbook features that are built into the NetSuite solution. Real-time transparency of company performance across all business functions—from summary level to transaction level. However, it does not reveal any business process details, such as Figure ~\ref{figure:monitor}.
 
 
 \begin{figure}[!htb]
@@ -140,14 +150,14 @@ Currently, HCS provides an internal dashboard for weekly meetings. It provides s
 
 \section{Problems faced by HCS}
 
-There are eight customers in HCS at the moment. They are not in the same industry, six customers are in the manufacturing industry and the rest of them are in the service industry. HCS uses the NetSuite ERP system at moment, they are looking for selling the NetSuite and NetSuite application to customers. They provide different type of IT support services, at the same time, HCS provide support for eight NetSuite customers. 
+There are eight customers in HCS at the moment. They are not in the same industry, six customers are in the manufacturing industry and the rest of them are in the service industry. HCS uses the NetSuite ERP system at moment, they are looking for selling the NetSuite and NetSuite application to customers. They provide different types of IT support services, at the same time, HCS provide support for eight NetSuite customers. 
 
 We have identified a number of problems that will be the target of this study. The problems in the different industries at the moment, and we believe it is not connected to the category of the client. It may happen to any industry such as the financial department or support department. Different types of companies can only approach maximum efficiency and make key business process improvements when they understand how their workflows truly work. Humans alone can not perform this data extraction and analysis fast enough to make their organizations competitive. The problems from customers or HCS reveal that many deviations to the expected process model outcome happened at companies and caused the problems or potential problems.
 
 
 
-\subsection{Problem 1}
-Client 1 is in the manufacturing medical device industry. They have a manufacturing part of the process shown in figure 10. In this context, the “sales order" process involves three roles: sales team, manufacturing team and customer. A sales team is any user who faces customers and can raise sales orders and generate an estimate. A manufacturing team is composed of employees responsible for dealing with manufacturing, e.g. raise work order and pick components from stock. The system also includes customer roles, which are responsible for approving estimates of costs.
+\subsection{Problem \#~1}
+Client 1 is in the manufacturing medical device industry. They have a manufacturing part of the process shown in figure 10. In this context, the “sales order" process involves three roles: sales team, manufacturing team and customer. A sales team is any user who faces customers and can raise sales orders and generate an estimate. A manufacturing team is composed of employees responsible for dealing with manufacturing, e.g., raise work orders and pick components from stock. The system also includes customer roles, which are responsible for approving estimates of costs.
 
 \begin{figure}[!htb]
     \centering 
@@ -159,7 +169,7 @@ Client 1 is in the manufacturing medical device industry. They have a manufactur
 As shown in Figure ~\ref{figure:soAndwo}, the sales order process starts with:
 
 \begin{itemize}
-    \item the task “1. generate an estimate”, which is created by the “sales team”. The estimate needs to be approved by the customer (task "2. pending approval").
+    \item the task “1. Generate an estimate”, which is created by the “sales team”. The estimate needs to be approved by the customer (task "2. pending approval").
     \item Then, the approved estimate is converted into a  "sale order" (task "3. raise sale order"). A sale order can be  composed of several items. The process proceeds with a check for these items in stock (decision point "4. Order validation and item in stock").
     \item In case the items are in stock, they are picked up and packed (task "10. Pick, pack and sales order") before the order is fulfilled and the items shipped to the customer (task "raise ship order").
     \item Otherwise, a "Work order" for those items that are not in stock needs to be created by the "manufacturing team" (task "6. Raise work order").
@@ -192,9 +202,9 @@ Currently, four ways of monitoring at HCS:
 
 Moreover, the client would like to use such data to calculate and compare expected process completion time with the actual time. 
 
-To summarise, the proposed solution is that A dashboard for showing the times of the process. It starts with the average completion time of the whole process. It can then be broken down into average process times based on the "path". Then it can be broken down into average time per item per path.
+To summarise, the proposed solution is that A dashboard for showing the time of the process. It starts with the average completion time of the whole process. It can then be broken down into average process times based on the "path". Then it can be broken down into average time per item per path.
 
-\subsection{Problem 2}
+\subsection{Problem \#~2}
 
 Client 2 is in the computer and software service industry, they provide field service and another purchase order for their customer. In this context, there are two roles involved: sales team and field engineer team. A sales team is a team who is responsible to raise sales orders and purchase orders. A field service engineer team is an employee who provides IT support or product installation on site. 
 
@@ -218,18 +228,18 @@ As shown in Figure ~\ref{figure:soAndfieldservice}, the business process starts 
 
 Client 2  reports problems involving delayed sales orders. The delays have been caused by different reasons:
 \begin{itemize}
-\item the purchase order is delayed due to problems with the suppliers.
-\item Field service work is delayed due to unforeseen circumstances.
-\item There is a shortage of field engineers to perform the field work.
+    \item The purchase order is delayed due to problems with the suppliers.
+    \item Field service work is delayed due to unforeseen circumstances.
+    \item There is a shortage of field engineers to perform the field work.
 \end{itemize}
 
-currently, HCS provides the monitor for explanation which sales order has been delayed by "save search", however, the monitor is difficult to explain why it has been delay, the lack of reasonable expected time for each business process are the one of the major problems for existing monitor. 
+currently, HCS provides the monitor for the explanation which sales order has been delayed by "save search", however, the monitor is difficult to explain why it has been delay, the lack of reasonable expected time for each business process are one of the major problems for the existing monitor. 
 
-Moreover, the NetSuite provides full history logging about details of field engineers and their work allocation. At same time, the whole business process logging has been record in NetSuite.
+Moreover, the NetSuite provides full history logging about details of field engineers and their work allocation. At same time, the whole business process logging has been recorded in NetSuite.
 
-In conclusion, the proposed solution is A dashboard for providing different reasons of delay the transaction process based on calculated reasonable process time. it also provides summarised historical information for senior executives to see where are the problems lie and why the problems happened. 
+In conclusion, the proposed solution is A dashboard for providing different reasons of delaying the transaction process based on calculated reasonable process time. It also provides summarised historical information for senior executives to see where are the problems lying and why the problems happened. 
 
-\subsection{Problem 3}
+\subsection{Problem \#~3}
 
 Client 3 is in the computer and software service industry, they provide support case service with the process shown on Figure ~\ref{figure:supportCase}.
 \begin{figure}[!htb]
@@ -242,13 +252,13 @@ Client 3 is in the computer and software service industry, they provide support 
 In this context, the “support case process” includes four different roles:
 \begin{itemize}
 
-\item A "customer" is the customers of Client 3 who is responsible to raise support cases.
+\item A "customer" is the customers of Client 3 who are responsible to raise support cases.
 \item The system also includes "support teams", which comprises allocated support cases and solve general support cases.
 \item A "field service team" is responsible for solving support cases on site.
 \item An "ERP team" is any user who focuses on support cases relevant to the NetSuite ERP system.
 \end{itemize}
 
-As Figre ~\ref{figure:supportCase} shown, the support case process starts with the task “1. raise support case” by customers, then there is an option for customers if they decide to cancel their support case (task "3. Cancel support case by user"). Support cases are allocated by a member of the "support team", which can decide to allocate it to any of the available teams based on the information included in the support case(task "6. allocate to different team ). There are three different situations based on different types of problems. Firstly, the support team may solve the problems by phone call or emails by themselves(task "10. slove support case"). Another, if there are required on-site helpdesk or service, the support team will transfer the support case to the field service team(task "12. field service"). Finally, if the support case is relevant to the ERP system, the support team will transfer the support case to the ERP team(task "14. ERP support case").
+As Figre ~\ref{figure:supportCase} shown, the support case process starts with the task “1. raise support case” by customers, then there is an option for customers if they decide to cancel their support case (task "3. Cancel support case by user"). Support cases are allocated by a member of the "support team", which can decide to allocate it to any of the available teams based on the information included in the support case(task "6. allocate to different teams ). There are three different situations based on different types of problems. Firstly, the support team may solve the problems by phone call or emails by themselves(task "10. slove support case"). Another, if there are required on-site helpdesk or service, the support team will transfer the support case to the field service team(task "12. field service"). Finally, if the support case is relevant to the ERP system, the support team will transfer the support case to the ERP team(task "14. ERP support case").
 
 \begin{figure}[!htb]
     \centering 
@@ -258,15 +268,19 @@ As Figre ~\ref{figure:supportCase} shown, the support case process starts with t
 \end{figure}
 
 
-Currently, there are dashboards to present the list of support cases which includes "latest message time" and "created time" like Figure ~\ref{figure:supportCaseHCS}. it only shows limited details such as the basic time stamp. However, the senior executives would like to know if there are some "spaghetti processes"(long and unmeaningful processes) or any other reasons. For example, it is because we are lacking in field engineering to solve the support case which delays the support case, and a support case has been delivered to different teams multiple times.
+Currently, there are dashboards to present the list of support cases which includes "latest message time" and "created time" like Figure ~\ref{figure:supportCaseHCS}. It only shows limited details such as the basic time stamp. However, the senior executives would like to know if there are some "spaghetti processes"(long and unmeaningful processes) or any other reasons. For example, it is because we are lacking in field engineering to solve the support case which delays the support case, and a support case has been delivered to different teams multiple times.
 
-Predominantly, the proposed solution is a dashboard for showing the times  and conformance checking of the process to analysis and present the problems of business processes.it will consider about time perspective which focuses on the timing and frequency of events.Also, organisational perspective which focuses on information about resources hidden in the log, i.e., which actors (like,people, roles) are involved and how are they related.
+Predominantly, the proposed solution is a dashboard for showing the times  and conformance checking of the process  analysis and present the problems of business processes.It will consider about time perspective which focuses on the timing and frequency of events.Also, organisational perspective which focuses on information about resources hidden in the log, i.e., which actors (like,people, roles) are involved and how are they related.
+
+
+\section{Research Theme}
+
 
 
 \section{Final considerations} 
 
 Clearly, there are three problems being presented, the proposed solution is a dashboard for showing the business processes from time and organisational perspectives.
 
-For further study, predictive business monitoring is one of the future topics from time perspective. the business value monitoring is from the business values perspective, such as integrity, perseverance, determination.
+For further study, predictive business monitoring is one of the future topics from time perspective. the business value monitoring is from the business values perspective, such as integrity, perseverance, and determination.
 
 Based on existing problems and proposed solutions, the next steps will provide ProM and Apromore to analyse the problems and design problems solutions.

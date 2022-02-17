@@ -1,4 +1,4 @@
-\chapter{Literature review}
+\chapter{Background and Literature review}
 
 \section{Business Process Management}
 
@@ -14,6 +14,64 @@ stages: process design, system configuration, process enactment and diagnosis.
     \item In the process enactment stage, electronically modelled BPs are deployed in the BPMS engines. by using execution standards, such as BPEL and BPML.
     \item In the diagnosis stage, the BPM analysts define and improve bottlenecks in the BPs by using analysis and monitoring tools, such as business activity monitoring (BAM)) and process mining .
 \end{itemize}
+
+\section{Terminology}
+
+\begin{table}[htb]
+\footnotesize	 %changing the font size
+\begin{tabularx}{\textwidth}{X X}
+
+\hline
+Terms in this paper   & Explanation \\
+\hline
+Process instances & A \textit{process instance} represents one specific instance of a process that is currently executing \\
+\hline
+Process mining & \textit{Process mining} is a technique to analyze and track processes.\\
+\hline
+Document Number & It is the unique ID for each activities  \\
+\hline
+Tasks & A business process is composed of \textit{tasks}. \\
+\hline
+Role & Each lane represents a \textit{role} in the problems section~\pageref{figure:soAndfieldservice}  . \\
+\hline
+Trace & Each business process instance contains a \textit{trace} over the business process. \\
+\hline
+Case &  A particular \textit{case} is a \textit{process instance} \\ 
+\hline
+Case Id & A unique identifier for a particular \textit{process instance}\\
+\hline
+Event log & It is required to contain a case id ,activity description, and timestamp . \\
+\hline
+Activity & It describe the event that is occurring \textit{activity}. \\
+\hline
+Resource & Process mining use extra information the \textit{resource}(i.e., person or device) executing or initiating the activity \\
+\hline
+Process models & The result of process discovery is generally a \textit{process model}. \\
+\hline
+Petri nets & One of process models. \\
+\hline
+
+\end{tabularx}
+\caption{current terms explanation}
+\label{table:terminology}
+\end{table}
+
+
+To avoid confusion came from using different terminologies, in this section , the term will be used to describe the comprehensive list  combining and explaining used terms and others terms. The analysis of terminology collected from literature and summarized in Table~\ref{table:terminology}
+
+
+
+% We follow BPMN as basis.
+
+% \begin{itemize}
+%     \item A business process is composed of \textit{tasks}.
+%     \item Each lane represents a \textit{role}.
+%     \item A business process instance corresponds to the execution of the business process to a particular case. 
+%     \begin{itemize}
+%         \item Each business process instance contains a trace over the business process (the activities that have been performed for that particular instance).
+%     \end{itemize}
+%     \item ...
+% \end{itemize}
 
 
 \section{Business Process Mining}

@@ -48,7 +48,8 @@ WHERE "SYSTEM NOTE:DATE"
     "SYSTEM NOTES: TYPE" == "CREATE"
 \end{lstlisting}
 
-In Fig~\ref{table:dataformat} shows the data in CSV format. There are 10000 traces in the dataset where it shows only the trace 5. There are many activities in trace 5 i.e., Document ID and Period and Created from, timestamp . The trace 1 contains many sequences of activities. Likewise there are 10000 traces are populated using the transaction activities.
+In Fig~\ref{table:dataformat} shows the data in CSV format. 
+There are 10000 activities in the dataset where it shows only the trace 5. There are many activities in trace 5 i.e., Document ID and Period and Created from, timestamp . The trace 1 contains many sequences of activities. Likewise there are 10000 activities are populated using the transaction activities.
 
 \begin{table}[htb]
 \scriptsize %changing the font size
@@ -62,24 +63,84 @@ Internal ID & Date & Type & Document Number & Created From & Applied to Transact
 \hline
 1822454 &	31/01/2021 &	Journal &	4672 &	Invoice \#64932 &	Invoice \#64932 &	& Highlander Accountant &	Employee \#2 \\
 \hline
-
 \end{tabularx}
 \caption{Data Format From NetSuite}
 \label{table:dataformat}
 \end{table}
 
+\todo[inline]{comprehensive data show here with explanation }
 
 Even log contains columns in table~\ref{table:dataformat} from left to right:
 \begin{enumerate}
-    \item  Internal ID: This is the unique ID for each activity from NetSuite databased ID
-    \item Date: It is itemtamp for activity
-    \item Type: The columns show different type of activity
-    \item Document Number: The unique activity ID
-    \item Created From: The columns shows that the activity created from another activity's ID and Type
-    \item Appplied to Transactions (Applying Transaction): The next associated activity.
-    \item Role: The role created or triggered the activity.
-    \item Set by: The specific employed triggered the activity
+    \item \textbf{Internal ID}: This is the unique ID for each activity from NetSuite database ID.
+    \item \textbf{Date}: It is timestamp for activity (only date? or date and time?)
+    \item \textbf{Type}: The columns show different type of tasks. Those are the tasks that compose the business process.
+    \item \textbf{Document Number}: The unique task ID for the particular process instance.
+    \item \textbf{Created From}: The columns shows that the task that happened before the current task.
+    \item \textbf{Applied to Transaction} (Applying Transaction): The next associated activity.
+    \item \textbf{Role}: The role created or triggered the activity.
+    \item \textbf{Set by}: The specific employee that performed the activity. The username of that particular user in the system.
 \end{enumerate}
+
+\todo[inline]{Explain all the possible ``types'' (tasks in the NetSuite system) in the text and not in the table. Use the table with only 2 columns.}
+
+
+
+\begin{table}[htb]
+\footnotesize	 %changing the font size
+\begin{tabularx}{\textwidth}{X X X}
+
+\hline
+\textbf{Terms in Data} & \textbf{Terms in Problem section} \\
+\hline
+Bill  &  \\
+\hline
+Bill Credit  &  \\
+\hline
+Bill Payment &  \\
+\hline
+Cash Sale  &  \\
+\hline
+Cheque  &  \\
+\hline
+Estimate  &  \\
+\hline
+Invoice  & 10. invoice (task "10) . \\
+\hline
+item Fulfillment  & 5. receive the item(task "5) \\
+\hline
+item Receipt  &  \\
+\hline
+Journal  &  \\
+\hline
+Opportunity  &  \\
+\hline
+Payment  &  \\
+\hline
+Purchase Order  & 3. raise purchase order(task "4)  \\
+\hline
+Sales Order  & 1. raise a sales order (task "1)  \\
+\hline
+Transfer  &  \\
+\hline
+Return Authorisation  &  \\
+\hline
+Field Service  & 4. raise field service (task "4)  \\
+\hline
+\end{tabularx}
+\caption{Explanation of all available types in the NetSuite data. A type corresponds to a task in the business process.}
+\label{table:terminologyData}
+\end{table}
+
+
+Moreover, to avoid confusion came from using different type names, the term will be used to describe the comprehensive list combining with the "problem" section~\pageref{figure:soAndfieldservice} used terms. The analysis of terminology collected from NetSuite databases and "problem" section~\pageref{figure:soAndfieldservice}, summarized in Table~\ref{table:terminologyData}
+
+
+\todo[inline]{Include examples (raw log data) of two or three separate instances.}
+
+
+\todo[inline]{After finishing the two/three instances, you can update the business process diagram.}
+
 
 \subsection{Data Processing}
 Data preprocessing is the efficient process to discover suitable attributes from the event log. Collection of sequence process in the event are extracted from the source list of activities and mentioned the related events and attributes of log. We have to concentrate important processes to maintain the efficiency in the source data set, i.e.

@@ -6,8 +6,7 @@ BPM has been viewed from highly diverse angles ranging from a management strateg
 
 BPM is a cycle methodology where several perspectives of BPs are investigated during its various stages~\cite{lodhi2013business}. In order to effectively understand BPM terminologies and features, we start with an overview of the BPM life cycle.
 
-According to Van-Der-Aalst~\cite{van2003workflow}, the BPM life cycle comprises four
-stages: process design, system configuration, process enactment and diagnosis.
+According to Van-Der-Aalst~\cite{van2003workflow}, the BPM life cycle comprises four stages: process design, system configuration, process enactment and diagnosis.
 \begin{itemize}
     \item In the process design stage, the AS-IS BPs are electronically modelled into the BPMS by using graphical standards, such as UML and BPMN.
     \item In the system configuration stage, the BPMS and the underlying system infrastructure are configured. 
@@ -17,12 +16,9 @@ stages: process design, system configuration, process enactment and diagnosis.
 
 \section{Terminology}
 
-\todo[inline]{What is the reference? Where do these come from? Is it from a book? a paper?}
 
 This section presents the terminology used in this project.
-It is based on the definitions by author1 [REF] and author2 [REF], .... 
-
-Was this (\cite{Aalst2013}) used? What about this \cite{dumasFundamentalsBusinessProcess2018} (Chapter 1)? Or one of the main references in process mining? Or was it based on BPMN?
+It is based on the definitions by Wil van der Aalst~\cite{Aalst2013} and Marlon Dumas~\cite{dumasFundamentalsBusinessProcess2018} [REF].Different organisation use different terms for overlapping concepts. The Table~\ref{table:terminology} provide explanation about terms in this paper.
 
 \begin{table}[htb]
 \footnotesize	 %changing the font size
@@ -30,35 +26,46 @@ Was this (\cite{Aalst2013}) used? What about this \cite{dumasFundamentalsBusines
 
 \hline
 Terms in this paper   & Explanation \\
-\hline 
-Business process & ... \\
 \hline
-Process instances & A \textit{process instance} represents one specific instance of a process that is currently executing \\
+Process instance~\cite{van2011process} & A \textit{process instance} represents one specific instance of a process that is currently executing \\
 \hline
-Process mining & \textit{Process mining} is a technique to analyze and track processes.\\
+Process mining~\cite{Aalst2013} & \textit{Process mining} is a technique to analyze and track processes.\\
 \hline
-Document Number & It is the unique ID for each activities  \\
+Document Number~\cite{dumasFundamentalsBusinessProcess2018} & It is the unique ID for each activities  \\
 \hline
-Tasks & A business process is composed of \textit{tasks}. \\
+Tasks~\cite{Aalst2013} & A business process is composed of \textit{tasks}. \\
 \hline
 Role & Each lane represents a \textit{role} in the problems section~\pageref{figure:soAndfieldservice}  . \\
 \hline
 Trace & Each business process instance contains a \textit{trace} over the business process. \\
 \hline
-Case &  A particular \textit{case} is a \textit{process instance} \\ 
+Case &  A particular \textit{case} may have more than one process instance associated with it \\ 
 \hline
-Case Id & A unique identifier for a particular \textit{process instance}\\
+Case Id & Each~\textit{case} can be identified by its individual case ID and can have attributes with different values\\
+\hline
+activity & An action or task that can be performed for a process instance (conceptual level) \textit{process instance}\\
 \hline
 Event log & It is required to contain a case id ,activity description, and timestamp . \\
 \hline
-Activity & It describe the event that is occurring \textit{activity}. \\
+Resource~\cite{Aalst2013} & Process mining use extra information the \textit{resource}(i.e., person or device) executing or initiating the activity \\
 \hline
-Resource & Process mining use extra information the \textit{resource}(i.e., person or device) executing or initiating the activity \\
+Process models~\cite{dumasFundamentalsBusinessProcess2018} & The result of process discovery is generally a \textit{process model}. \\
 \hline
-Process models & The result of process discovery is generally a \textit{process model}. \\
+Petri nets~\cite{Aalst2013} & One of process models. \\
 \hline
-Petri nets & One of process models. \\
+Process Discovery~\cite{Aalst2013} & Visual representation of all cases of the dataset. \\
 \hline
+Process variant~\cite{Aalst2013} & visual representation of the most important variants of the dataset.. \\
+\hline
+Conformance checking~\cite{Aalst2013} & compare real process with BPMN model. \\
+\hline
+Cycle time~\cite{Aalst2013} & The time it takes for one process run to complete the full set of activities to accomplish a business process. \\
+\hline
+Event~\cite{Aalst2013} & event = case + activity + timestamp + etc. \\
+\hline
+Timestamp~\cite{Aalst2013} & A time indication consisting of a date and possibly a time part(instance level) \\
+\hline
+
 
 \end{tabularx}
 \caption{current terms explanation}
@@ -66,7 +73,7 @@ Petri nets & One of process models. \\
 \end{table}
 
 
-To avoid confusion came from using different terminologies, in this section , the term will be used to describe the comprehensive list  combining and explaining used terms and others terms. The analysis of terminology collected from literature and summarized in Table~\ref{table:terminology}
+To avoid confusion came from using different terminologies , the term will be used to describe the comprehensive list  combining and explaining used terms and others terms. The analysis of terminology collected from literature and summarized in Table~\ref{table:terminology}
 
 
 
@@ -105,14 +112,8 @@ The study of event logs and how they are extracted from ISs (right part of Figur
 
 Later research focuses more on the upper-red part of Figure 1, i.e., the relationship between the “world” and ISs. While Turner ~\cite{turner2012process} provide an overview of the process mining tools available in the UK market, other studies address either the combination of process mining with other technologies (e.g. artificial neural networks, support vector machines) ~\cite{maita2015ultraflexible} or a specific application area (e.g. healthcare) ~\cite{rojas2016process} ~\cite{yang2014process}. Our study follows Rojas’s path and addresses the relationship between the “world,” more specifically, “organizations,” and IS, which is marked in red in Figure 1. Similar to the most recent reviews (~\cite{kurniati2016process}; ~\cite{maita2015process}; ~\cite{rojas2016process}), we follow a systematic literature review approach. However, we adopt a broader scope to analyze empirical studies on process mining that is not limited to a specific market or application area.
 
+\section{Process Mining Tools}
 
-
-\section{Other papers}
-
-Papers that have been read but it is still not clear where this paper fits within the project.
-
-\subsection{Paper \#01}
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Describe the tools here.
 
 \section{Final Considerations}

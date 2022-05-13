@@ -1,3 +1,4 @@
+
 \chapter{Industry Experience}
 \label{chap:industryExperience}
 
@@ -16,9 +17,8 @@ In this chapter, we are going to investigate the problem \#2, as shown in Figure
 
 This has been used as basis for creating a bpmn diagram capturing the desired process after discussions with members of Highlander.
 
-The resulting process can be seen on \highlight{<link for transaction.bpmn image on google drive>}.
+The resulting process can be seen \href{https://raw.githubusercontent.com/kangqiwang/bpmResearch/main/transaction.png}{link}.
 
-\todo[author=CdS,inline]{Double check names of tasks in the transaction.bpmn file. Make sure each task has number and verb (name of the task must be clear). Generate figure and save in google drive}
 
 \section{Experimental setup}
 \label{sec:industryExperience-Methodology}
@@ -104,50 +104,42 @@ Even log contains columns in table~\ref{table:dataformat} from left to right:
 \begin{tabularx}{\textwidth}{X|X|X}
 \hline
 \textbf{Terms in Data} & \textbf{Terms in Problem section} & \textbf{Terms in transaction.bpmn} \\
+
 \hline
-Column1 & column 2 & column 3 \\
-\hline 
- & &  \\
-\hline
-Bill &  & \\
-\hline
-Bill Credit  & &  \\
-\hline
-Bill Payment &  & \\
+Bill Payment &  & 13.generate customer payment\\
 \hline
 Cash Sale  &  & \\
 \hline
 Cheque  &  & \\
 \hline
-Estimate  &  & \\
+Estimate  &  &1. create Lead \\
 \hline
-Invoice  & 10. invoice (task "10). &  \\
+Invoice  & 10. invoice (task "10). & 12. Create Invoice \\
 \hline
-item Fulfillment  & 5. receive the item(task "5) & Item fulfillment \\
+item Fulfillment  & 5. receive the item(task "5) & 11. fulfill item \\
 \hline
-item Receipt  &  & \\
+item Receipt  &  & 10. receive item(item receipt)\\
 \hline
 Journal  &  \\
 \hline
-Opportunity  &  \\
+Opportunity  &  & 2. create opportunity\\
 \hline
-Payment  &  \\
+Payment  &  & 13.generate customer payment\\
 \hline
-Purchase Order  & 3. raise purchase order(task "4)  \\
+Purchase Order  & 3. raise purchase order(task "4) & 9. create purchase order  \\
 \hline
-Sales Order  & 1. raise a sales order (task "1)  \\
+Sales Order  & 1. raise a sales order (task "1) & 6. create sales order\\
 \hline
 Transfer  &  \\
 \hline
-Return Authorisation  &  \\
+Return Authorisation  & & 22. create return authorization \\
 \hline
-Field Service  & 4. raise field service (task "4)  \\
+Field Service  & 4. raise field service (task "4)   \\
 \hline
 \end{tabularx}
 \caption{Explanation of all available types in the NetSuite data. A type corresponds to a task in the business process.}
 \label{table:terminologyData}
 \end{table}
-\todo{match the from figure 4.2 terms in the table 4.2} 
 
 To avoid confusion came from using different type names, the term will be used to describe the comprehensive list combining with the "problem" section~\pageref{figure:soAndfieldservice} used terms. The analysis of terminology collected from NetSuite databases and "problem" section~\pageref{figure:soAndfieldservice}, summarized in Table~\ref{table:terminologyData}
 
@@ -244,16 +236,16 @@ Case ID &Internal ID & Date & Type & Document Number & Created From & Applied to
 In our dataset, we have identified 10000 process instances and have taken as the event log. Those one thousand transactions are directed to different events and 12000 events are traced in event history over there. 
 
 The activities are segregated into 20 event classes. 
-The mean values of these events are calculated based on cases. Fig~\ref{figure:promXESEvent} shows the number of cases, events and mean value of the given dataset. In 10000 process instances the minimum and maximum values are traces in the Fig~\ref{figure:promXESEvent}. The total traces and by event trace are also mentioned in the diagram. This is the event log visualizer in the process mining. This visualizer helps to see the summary of the activity trace in the process. Log visualizer traces the event which is occurring starting and ending of the process. As well the activity sequence in each trace also identified in this
+The mean values of these events are calculated based on cases. Fig~\ref{figure:eventLogTraces2} shows the number of cases, events and mean value of the given dataset. In 10000 process instances the minimum and maximum values are traces in the Fig~\ref{figure:eventLogTraces2}. The total traces and by event trace are also mentioned in the diagram. This is the event log visualizer in the process mining. This visualizer helps to see the summary of the activity trace in the process. Log visualizer traces the event which is occurring starting and ending of the process. As well the activity sequence in each trace also identified in this
 
 
-\begin{figure}[!htb]
-    \centering 
-    \includegraphics[scale=0.3]{resource/XESeventLog1.png}
-    \caption{ProM lite 1.3 XES Event Log Problems}
-    \label{figure:promXESEvent}
-\end{figure}
-\comment[id=CdS]{What is this figure?}
+% \begin{figure}[!htb]
+%     \centering 
+%     \includegraphics[scale=0.3]{resource/XESeventLog1.png}
+%     \caption{ProM lite 1.3 XES Event Log Problems}
+%     \label{figure:promXESEvent}
+% \end{figure}
+% \comment[id=CdS]{What is this figure?}
 
 
 \section{Mining with ProM tool}
@@ -330,7 +322,7 @@ The required attributes are selected for process mining like activities and time
 \todo[inline]{A text with your conclusions after running the five experiments.}
 
 
-\section{Lost material}
+\section{Event Log}
 
 \comment[id=CdS]{These are material that I don't know what it means.}
 
@@ -348,18 +340,18 @@ The required attributes are selected for process mining like activities and time
 
 
 
-\subsection{Miner Algorithm}
-\todo move to background chapter
+% \subsection{Miner Algorithm}
+% \todo move to background chapter
 
-\paragraph{Alpha miner}
+% \paragraph{Alpha miner}
 
-The alpha-algorithm analyzes the event log to design graphs called patterns. The event log contains the concurrent activities in particular process that means the sequence of activities. The design follows the order of relation in between the activities. Finally alpha algorithm produces the petri net design as result. Our experiment, if activity d is followed by e but vice versa is not possible, then the algorithm confirms dependency relation between d and e. To reflect this dependency, the corresponding Petri net should have a place connecting d to e. We use ordering in between the relations to design the pattern in the event log.
+% The alpha-algorithm analyzes the event log to design graphs called patterns. The event log contains the concurrent activities in particular process that means the sequence of activities. The design follows the order of relation in between the activities. Finally alpha algorithm produces the petri net design as result. Our experiment, if activity d is followed by e but vice versa is not possible, then the algorithm confirms dependency relation between d and e. To reflect this dependency, the corresponding Petri net should have a place connecting d to e. We use ordering in between the relations to design the pattern in the event log.
 
-Whenever the complex and frequent activity paths, produces spaghetti[27], that shows the complex structure. The graph determines the activity process flow of patients from start to end. The patient’s details are maintained in admin and the treatment activity and time stamp are mentioned in the process. There are many parallel processes going on and all are noted with time stamp. In alpha algorithm, the entire process will be shown as a graph[28]. Hence, this method which is used for real time applications, such as healthcare process are very helpful to the doctors, hospitals and patients for quick treatment with respect to processing time, waiting time, etc.
+% Whenever the complex and frequent activity paths, produces spaghetti[27], that shows the complex structure. The graph determines the activity process flow of patients from start to end. The patient’s details are maintained in admin and the treatment activity and time stamp are mentioned in the process. There are many parallel processes going on and all are noted with time stamp. In alpha algorithm, the entire process will be shown as a graph[28]. Hence, this method which is used for real time applications, such as healthcare process are very helpful to the doctors, hospitals and patients for quick treatment with respect to processing time, waiting time, etc.
 
-\paragraph{The Heuristics miner}
-\paragraph{Inductive miner}
-\paragraph{Fuzzy miner}
+% \paragraph{The Heuristics miner}
+% \paragraph{Inductive miner}
+% \paragraph{Fuzzy miner}
 
 
 
@@ -374,8 +366,11 @@ It is platform independent as it is implemented in Java, and can be downloaded f
 Apromore is an open-source process model repository. Its source code is available under the GNU Lesser General Public License.Apromore’s basic features include model import and export, version control and modeling support for a variety of languages, e.g., BPMN,
 eEPC, YAWL, and Petri nets. It also supports CSV import. However, they required a format for CSV files 
 
-\section{Source Code}
+% \section{appendix}
 
-\todo appendix
-
+\appendix
 \lstinputlisting[language=Python,label={pythonCode},caption=Clean Data Source Code]{resource/Code/cleanData.py}
+\appendix
+
+% \todo appendix
+

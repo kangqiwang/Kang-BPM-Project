@@ -15,15 +15,15 @@ In this chapter, the business discovery has been experienced using different exi
 
 In this chapter, we are going to investigate the problem \#2, as shown in Figure ~\ref{figure:soAndfieldservice}.
 
-This has been used as basis for creating a bpmn diagram capturing the desired process after discussions with members of Highlander.
+This has been used as basis for creating a BPMN diagram capturing the desired process after discussions with members of Highlander.
 
 The resulting process can be seen \href{https://raw.githubusercontent.com/kangqiwang/bpmResearch/main/transaction.png}{link}.
 
 
 \section{Experimental setup}
 \label{sec:industryExperience-Methodology}
-For this study, we analyzed the data collected from  \textbf{companyA}. 
-The original data contains the information about the different roles and employee's name with corresponding time frame. Before introducing the  standard event log (cas ID, activity and time stamp), the NetSuite data will explains
+For this study, we analyzed the data collected from  \textbf{company A}. 
+The original data contains the information about the different roles and employee's name with corresponding time frame. Before introducing the  standard event log (case ID, activity and time stamp), the NetSuite data will explains
 
 
 \subsection{NetSuite Events Log Data}
@@ -37,6 +37,7 @@ WHERE RowNum <= 10
 
 However,  the results of list\ref{lst:sqlNetSuiteAll} contains 453 columns as a CSV file , which is saved in a google doc\footnote{
 \url{https://docs.google.com/spreadsheets/d/1Uo6t0si8r36s8oHdHOK50PJxLDHW4PWuQDcRe8V_mN0/edit?usp=sharing}}.
+
 For  easier understanding and explanation, the original data from NetSuite will be cleaned and ignore the unnecessary columns. 
 
 Fig~\ref{figure:saveSearch} shows the "save search" for extracting data from NetSuite, which is equivalent to List~\ref{lst:sqlNetSuite}.  So each Transaction recorded are coded in XLSX format. We collected the instances those are related to all transaction details along with one year time duration. 
@@ -97,6 +98,8 @@ Even log contains columns in table~\ref{table:dataformat} from left to right:
 \end{enumerate}
 
 % \todo[inline]{Explain all the possible ``types'' (tasks in the NetSuite system) in the text and not in the table. Use the table with only 2 columns.}
+
+
 
 
 \begin{table}[htb]
@@ -260,6 +263,7 @@ The required attributes are selected for process mining like activities and time
 
 \subsection{Experiment \#1}
 
+
 \todo[inline]{Text to describe the experiment using a single case (case ID 1).}
 
 \todo[inline]{Show a table with the preprocessed data for case ID 1}
@@ -324,7 +328,7 @@ The required attributes are selected for process mining like activities and time
 
 \section{Event Log}
 
-\comment[id=CdS]{These are material that I don't know what it means.}
+
 
 \subsection{Event Log Traces}
 
